@@ -30,7 +30,7 @@ const Home = () => {
     const chatActive =  viewChatbot ? 'clicked' : 'unclicked';
 
     // NGROK URL 
-    const ngrok_url = 'https://8493-34-125-86-191.ngrok-free.app'
+    const ngrok_url = 'https://5399-34-41-225-51.ngrok-free.app'
 
     async function refresh(e) {
         setKeywords([]);
@@ -76,6 +76,7 @@ const Home = () => {
                 console.log('File Uploaded Successfully');
                 setUploadStatus(data.message); // Status (fail/success) of the API response
                 const keywordsArray = data.keywords;
+                console.log(data.keywords)
                 // Process and save keywords in array
                 const newArray = keywordsArray.map((keyword) => keyword);
                 setKeywords((prevArray) => [...prevArray, ...newArray]);
